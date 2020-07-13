@@ -19,11 +19,17 @@ public class UIController : MonoBehaviour
     [Tooltip("The banner text")]
     public TextMeshProUGUI bannerText;
 
-    [Tooltip("The button")]
+    [Tooltip("The play button ")]
     public Button button;
+
+    [Tooltip("The mainMenu button")]
+    public Button MenuButton;
 
     [Tooltip("The button text")]
     public TextMeshProUGUI buttonText;
+
+    [Tooltip("The menu button text")]
+    public TextMeshProUGUI menubuttonText;
 
     /// <summary>
     /// Delegate for a button click
@@ -47,10 +53,11 @@ public class UIController : MonoBehaviour
     /// Shows the button
     /// </summary>
     /// <param name="text">The text string on the button</param>
-    public void ShowButton(string text)
+    public void ShowButton(string RePlaytext)
     {
-        buttonText.text = text;
-        button.gameObject.SetActive(true);
+        buttonText.text = RePlaytext;
+        button.gameObject.SetActive(true); 
+        MenuButton.gameObject.SetActive(true);
     }
 
     /// <summary>
@@ -59,6 +66,7 @@ public class UIController : MonoBehaviour
     public void HideButton()
     {
         button.gameObject.SetActive(false);
+        MenuButton.gameObject.SetActive(false);
     }
 
     /// <summary>
